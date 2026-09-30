@@ -642,9 +642,9 @@ const WORKOUTS = [
 ];
 
 const TUTORIALS = {
-  bodyweight: { title: "Bodyweight fundamentals: form check", desc: "A short breakdown of proper squat, push-up, and plank form using only your body weight.", id: "videoseries?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w" },
-  home: { title: "Dumbbell & resistance band basics", desc: "How to safely set up and use light dumbbells or bands at home.", id: "videoseries?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w" },
-  gym: { title: "Gym machine walkthrough", desc: "A quick tour of common gym machines and correct setup for each.", id: "videoseries?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w" },
+  bodyweight: { title: "Bodyweight fundamentals: form check", desc: "A short breakdown of proper squat, push-up, and plank form using only your body weight.", id: "30PqX2zvK88" },
+  home: { title: "Dumbbell & resistance band basics", desc: "How to safely set up and use light dumbbells or bands at home.", id: "30PqX2zvK88" },
+  gym: { title: "Gym machine walkthrough", desc: "A quick tour of common gym machines and correct setup for each.", id: "30PqX2zvK88" },
 };
 
 function getSelected(name) {
@@ -683,6 +683,7 @@ function renderResults() {
   const tut = TUTORIALS[access];
   document.getElementById('video-title').textContent = tut.title;
   document.getElementById('video-desc').textContent = tut.desc;
+  document.getElementById('tutorial-frame').src = `https://www.youtube.com/embed/${tut.id}`;
 }
 
 function setupChoiceStyling(groupId) {
